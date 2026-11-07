@@ -1,0 +1,259 @@
+.answers {
+    background: #fff;
+    min-height: calc(100vh - 120px);
+    padding: 35px 0 45px;
+}
+
+.answers .container {
+    max-width: 1120px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #f0eff4;
+    padding: 20px 0;
+}
+
+.header .container {
+    max-width: 1120px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.logo img {
+    display: block;
+    max-width: 145px;
+    height: auto;
+}
+
+.answers-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #c7c2d8;
+    margin-bottom: 45px;
+}
+
+.breadcrumb-arrow {
+    font-size: 20px;
+    color: #c7c2d8;
+}
+
+.answers-test-name {
+    color: #7138e9;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+
+.answers-header h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 55px;
+    line-height: 1.2;
+}
+
+.answers-header h2 span {
+    color: #7138e9;
+}
+
+.answers-content {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
+
+.answer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-item__title {
+    font-size: 23px;
+    font-weight: 700;
+    color: #414141;
+    margin: 0 0 24px;
+    line-height: 1.3;
+}
+
+.answer-item__title span {
+    color: #7138e9;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.3;
+}
+
+.answer-option__radio {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border: 3px solid #7138e9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.answer-option--correct {
+    color: #55d52e;
+}
+
+.answer-option--wrong {
+    color: #ed3535;
+}
+
+
+/* Правильный ответ — зелёный кружок */
+.answer-option--correct .answer-option__radio {
+    border-color: #55d52e;
+    background: transparent;
+    position: relative;
+}
+
+.answer-option--correct .answer-option__radio::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #55d52e;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Неправильный ответ — красный кружок */
+.answer-option--wrong .answer-option__radio {
+    border-color: #ed3535;
+    background: transparent;
+    position: relative;
+}
+
+.answer-option--wrong .answer-option__radio::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ed3535;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.answers-back {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+}
+
+.answers-back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #7138e9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.answers-back a::after {
+    content: "›";
+    font-size: 22px;
+    line-height: 1;
+}
+
+.answers-back a:hover {
+    color: #4f20b8;
+}
+
+.footer {
+    padding: 25px 15px;
+    text-align: center;
+    color: #d5d0e5;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .answers {
+        padding: 25px 0 35px;
+    }
+
+    .answers-breadcrumb {
+        margin-bottom: 30px;
+        font-size: 11px;
+    }
+
+    .answers-header h2 {
+        font-size: 29px;
+        margin-bottom: 40px;
+    }
+
+    .answers-content {
+        gap: 38px;
+    }
+
+    .answer-item__title {
+        font-size: 19px;
+        margin-bottom: 18px;
+    }
+
+    .answer-options {
+        gap: 12px;
+    }
+
+    .answer-option {
+        font-size: 14px;
+    }
+
+    .answer-option__radio {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+    }
+
+    .answers-back {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .answers .container,
+    .header .container {
+        width: calc(100% - 30px);
+    }
+
+    .answers-header h2 {
+        font-size: 25px;
+    }
+
+    .answer-item__title {
+        font-size: 17px;
+    }
+
+    .answers-content {
+        gap: 32px;
+    }
+
+    .answers-back a {
+        font-size: 12px;
+    }
+}
+
+
